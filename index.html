@@ -374,7 +374,7 @@
   }
 
   document.getElementById('btn-add').addEventListener('click', addItem);
-  inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') addItem(); });
+  inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.isComposing) addItem(); });
 
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
